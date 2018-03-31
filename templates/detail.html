@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static "css/detail.css" %}">{% endblock %}
+
+{% block title %}Город{% endblock %}
+
+{% block content %}
+    <table class="table">
+        <tbody>
+        <tr>
+            <th scope="col">1</th>
+            <th scope="col">Country Code</th>
+            <td>{{ city.country_code }}</td>
+        </tr>
+        <tr>
+            <th scope="row">2</th>
+            <th scope="col">ASCII City Name</th>
+            <td>{{ city.ascii_city_name }}</td>
+        </tr>
+        <tr>
+            <th scope="row">3</th>
+            <th scope="col">City Name</th>
+            <td>{{ city.city_name }}</td>
+        </tr>
+        <tr>
+            <th scope="row">4</th>
+            <th scope="col">Region</th>
+            <td>{{ city.region }}</td>
+        </tr>
+        <tr>
+            <th scope="row">5</th>
+            <th scope="col">Population</th>
+            <td>{{ city.population }}</td>
+        </tr>
+        <tr>
+            <th scope="row">6</th>
+            <th scope="col">Latitude</th>
+            <td>{{ city.latitude }}</td>
+        </tr>
+        <tr>
+            <th scope="row">7</th>
+            <th scope="col">Longitude</th>
+            <td>{{ city.longitude }}</td>
+        </tr>
+
+        </tbody>
+    </table>
+
+{% endblock %}
